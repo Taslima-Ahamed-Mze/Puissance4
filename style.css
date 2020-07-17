@@ -1,0 +1,160 @@
+body{
+    background-color: rgb(154, 224, 213);
+    text-align: center;
+}
+#game{
+    display: inline-block;
+    text-align: center;
+    background-color: blueviolet;
+    display: none;
+    width: 40%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.jeu{ 
+    display: none;
+    display: flex;
+    flex-direction: row;
+}
+.etat{
+    display: none;
+    border: 1px solid white;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    background-color: rgb(255, 105, 175);
+    display: flex;
+    flex-direction: column;
+}
+.etat1{
+    border: 1px solid white;
+    height: 50%;
+}
+.etat2{
+    border: 1px solid white;
+    height: 50%;
+}
+
+.col{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: beige;
+    margin: 5px;
+    display: inline-block;
+}
+.col.empty{
+    cursor: pointer;
+}
+.col.red{
+    background-color: red;
+}
+.col.yellow{
+    background-color: yellow;
+}
+.col.pred{
+    background-color: darkred;
+}
+.col.pyellow{
+    background-color: darkgoldenrod;
+}
+/* autre */
+.col.green{
+    background-color: green;
+}
+.col.blue{
+    background-color: blue;
+}
+
+.col.pgreen{
+    background-color: darkgreen;
+}
+.col.pblue{
+    background-color: darkblue;
+}
+.tour{
+    display: none;
+    border: 2px solid rgb(150, 74, 185) ;
+    background-color: rgb(255, 105, 175);
+    border-radius: 5px;
+    width: 20%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    /* margin-left: 530px;
+    width: 200px; */
+}
+#result{
+    display: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(255, 105, 175);
+    font-family:'Rokkitt', serif;
+    font-size: 1.6em;
+    width: 40%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    
+}
+#null{
+    display: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(255, 105, 175);
+    font-family:'Rokkitt', serif;
+    font-size: 1.6em;
+    width: 40%;
+    height: auto;
+    margin: auto;
+    text-align: center; 
+}
+.relancer {
+    box-shadow: 3px 3px 5px #888;
+    
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: rgb(255, 105, 175);
+    display: none;
+    
+    font-family:'Rokkitt', serif;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+   
+    cursor: pointer;
+}
+.info{
+    
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(255, 105, 175);
+    font-family:'Rokkitt', serif;
+    font-size: 1.6em;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    text-align: center; 
+}
+#jouer{
+    box-shadow: 3px 3px 5px #888;
+    
+    width: 100px;
+    height: 30px;
+    font-size: 0.8em;
+    text-align: center;
+    background-color: rgb(189, 58, 150);
+    color: white;
+    font-family:'Rokkitt', serif;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer; 
+}
+

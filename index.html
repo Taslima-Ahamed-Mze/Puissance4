@@ -1,0 +1,87 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puissance 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Puissance 4</h1>
+    <div class="info">
+       Joueur 1 <input type="text" id='name_p1'><br><br>
+       Joueur 2 <input type="text" id='name_p2'><br><br>
+       Couleur Joueur 1 <select name="color1" id="color1">
+            <option value="">choisir</option>
+           <option value="red">Rouge</option>
+           <option value="yellow">Jaune</option>
+           <option value="blue">Bleu</option>
+           <option value="green">Vert</option>
+       </select><br><br>
+       Couleur Joueur 2 <select name="color2" id="color2">
+            <option value="">choisir</option>
+            <option value="red">Rouge</option>
+            <option value="yellow">Jaune</option>
+            <option value="blue">Bleu</option>
+            <option value="green">Vert</option>
+        </select><br><br>
+        Longueur de la grille <select name="color2" id="y">
+            <option value="">choisir</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select><br><br>
+        Largeur de la grille <select name="color2" id="x">
+            <option value="">choisir</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select><br><br>
+        <button  type="submit" id="jouer">Jouer</button>
+
+    </div>
+    
+    <div class="tour" id="tour">
+    </div>
+    <div class="jeu">
+        <div class="etat">
+            <div class="etat1"></div>
+            <div class="etat2"></div>
+        </div>
+        <div id="game"></div>   
+    </div>
+    <div  id="null">Match null</div>
+    <div  id="result"></div>
+    <button class="relancer" id="relancer">Relancer</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="class.js"></script>
+<script src="main.js"></script>
+<script>
+    $(document).ready( function() {
+        $('.jeu').hide();
+        $('#jouer').on('click',function(){
+            
+            var name_p1 = $('#name_p1').val(); 
+            var name_p2 = $('#name_p2').val();
+            var color1 =  $('#color1').val(); 
+            var color2 =  $('#color2').val(); 
+            var x =  $('#x').val();
+            var y =  $('#y').val();
+        
+            $(".info").hide(); 
+            $('#tour').show(); 
+            $('.jeu').show();
+            $('.etat').show();
+            $('#game').show();
+            $("#game").grid(
+                    x, y,`${name_p1}`,`${name_p2}`,`${color1}`,`${color2}`   
+            ); 
+        });
+    } );
+
+</script> 
+</body>
+</html>
